@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Noto+Serif:wght@700&family=Special+Elite&display=swap" rel="stylesheet');
 
+/* common setting to all */
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -7,7 +14,26 @@ p,
 .btn1,
 .btn1a,
 .popuptext,
-.popup {
+.popup,
+nav li {
   font-family: "Special Elite", "Courier New", Courier, monospace;
   color: #555555;
+}
+
+body {
+  padding-top: 10rem;
+}
+
+/* end of common setting to all */
+
+/* nav bar */
+nav li {
+  font-size: 2rem;
+}
+/* end of nav bar*/
+
+/* Game home page */
+
+p {
+  font-size: 1.5rem;
 }
