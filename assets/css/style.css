@@ -1,1 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Noto+Serif:wght@700&family=Special+Elite&display=swap" rel="stylesheet');
+
+h1,
+h2,
+h3,
+p,
+.btn1,
+.btn1a,
+.popuptext,
+.popup {
+  font-family: "Special Elite", "Courier New", Courier, monospace;
+  color: #555555;
+}
