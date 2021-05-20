@@ -15,7 +15,8 @@ p,
 .btn1a,
 .popuptext,
 .popup,
-nav li {
+nav li,
+span {
   font-family: "Special Elite", "Courier New", Courier, monospace;
   color: #555555;
 }
