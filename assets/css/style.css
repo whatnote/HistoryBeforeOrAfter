@@ -37,3 +37,37 @@ nav li {
 p {
   font-size: 1.5rem;
 }
+
+/*footer styling*/
+.social-networks {
+  text-align: center;
+}
+
+.social-networks,
+li {
+  display: inline;
+}
+
+.social-networks i {
+  font-size: 2.5rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1rem;
+
+  color: #696666;
+  margin-bottom: -0.2rem;
+}
+
+.ptext {
+  color: #696666;
+  text-align: center;
+  font-family: "karla", "sans-serif";
+  font-size: 1.5rem;
+}
+
+.makerlink {
+  color: black;
+  text-align: center;
+  font-family: "karla", "sans-serif";
+  font-size: 1.5rem;
+}
