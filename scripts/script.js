@@ -1,4 +1,16 @@
 
+//shuffle
+
+//gameplay
+
+//dealing the cards on the left
+
+//popup for card link above.
+
+//dealing the cards - card on the right
+
+//rotating cards
+
 //deck of cards
 var cards = [
   new Card(
