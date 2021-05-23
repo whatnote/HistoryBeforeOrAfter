@@ -2,7 +2,9 @@ var message = document.getElementById('message');
 var count = 0
 var score = 0
 var moves = 10
-
+var cardOutput = document.getElementById('cards');
+var scoreOutput = document.getElementById('score');
+var cardOutputEvent = document.getElementById('cardright');
 
 //gameplay
 //start game
@@ -15,14 +17,58 @@ function gameStart() {
 
     document.getElementById('start').style.display = 'none';
     document.getElementById('clearTitle').style.display = 'none';
-
+    document.getElementById('highLow').style.display = 'block';
+    document.getElementById('highLowleft').style.display = 'block';
+    document.getElementById('cards').style.display = 'block';
+     
+    shuffleArray(cards);
+    cardOutput.innerHTML ="";
+    cardOutput.innerHTML += showCard();
+    scoreOutput.innerHTML = '<h3 class="scoreplace">Score: '+score+'</h3>';
+    cardOutputEvent.innerHTML ="";
+    cardOutputEvent.innerHTML +=showCardeventonly();
+    document.getElementById('clearcards').style.display ='block';
 }
 
 //shuffle
+function shuffleArray(array){
+  for(var i = array.length -1; i >0; i--){
+      var holder = Math.floor(Math.random() *(i+1));
+      var temp = array[i];
+          array[i]=array[holder];
+          array[holder] = temp;
+      }
+  return array;
+  console.log(array)
+}
 
 
 
 //dealing the cards on the left
+
+
+function showCard(){
+  return '<div id="cardtodeleteleft"><img src="assets/css/images/' 
+  +cards[count].image 
+  +'.jpg" class="cardpic"><p>'    
+  +cards[count].event+'<br><br>'
+  +cards[count].date
+  +'</p><div class="popup" onclick="moreInfo()">Click for more Info<span class="popuptext" id="myPopup">'
+  +cards[count].description
+  +'<br><a href="'
+  + cards[count].link
+  +'"target="_blank">Link</a>'
+  +'</span></div>';      
+}
+
+
+//dealing the cards - card on the right
+function showCardeventonly(){
+  return '<div id="cardtodeleteright"><p><img src="assets/css/images/' 
+  + cards[count+1].image 
+  + '.jpg" class="cardpic"><p>'    
+  +cards[count+1].event+'</p>'
+}
 
 //popup for card link above.
 

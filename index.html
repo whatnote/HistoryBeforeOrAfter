@@ -64,7 +64,7 @@
           </div>
         </div>
       </nav>
-
+<!-- the how to play will disappear when play starts-->    
       <div class="row justify-content-center align-items-center start">
         <div
           class="row justify-content-center align-items-center home"
@@ -86,7 +86,7 @@
           </div>
         </div>
       </div>
-
+    <!-- the deal button-->    
       <div class="row justify-content-center align-items-center" id="start">
         <div class="col-m-12 justify-content-center heading">
           <button
@@ -99,6 +99,46 @@
           </button>
         </div>
       </div>
+
+      
+      <div id="clearcards">
+        <div class="row justify-content-center align-items-center" id="start1">
+            <div class="col-m-12 justify-content-center">
+                <div id="score"></div>
+            </div>       
+        </div>
+ 
+        <div class="row justify-content-center align-items-center" >    
+   <!-- the first card, with date and event displayed-->           
+            <div class="col-m-5 justify-content-center historycardleft">
+               
+                <div class=" maincontainer justify-content-center" id="highLowleft">
+                    <div class="thecard frontflip">
+                        <div class="thefront "> <h1>History:</h1> <h3>Before or After?</h3></div>
+                            <div class="theback">
+                                <div id="cards">
+                                </div>
+                            </div>
+                    </div>
+                </div>               
+            </div>    
+   <!-- the second card, with highter or lower button-->         
+            <div class="col-m-5 justify-content-center historycardright">
+                <div class="maincontainer justify-content-center" id="highLow"> 
+                    
+                    <div class="thecard frontflip">
+                        <div class="thefront"> <h1>History:</h1> <h3>Before or After?</h3>
+                        </div>
+                            <div class="theback flipback">
+                                <div id="cardright"></div>
+                                    <button id="btnlow" type="button" onclick="hilo('before')" class="btn1">Before</button><br>
+                                    <button id="btnhigh" type="button" onclick="hilo('after')" class="btn1">After</button>  
+                            </div>                     
+                    </div>                  
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- social meadia footer-->
     <footer class="fixed-bottom bg-light">

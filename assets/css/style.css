@@ -67,6 +67,43 @@ nav li {
 
 /*end of Game home page */
 
+/* cards */
+.historycardleft {
+  text-align: center;
+
+  width: 250px;
+  height: 300px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.historycardright {
+  text-align: center;
+  width: 250px;
+  height: 300px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.cardpic {
+  border-radius: 15px;
+  height: 130px;
+  padding: 10px;
+}
+
+/*hides the high low buttons until game play starts. */
+#highLow {
+  display: none;
+}
+
+#cards {
+  display: none;
+}
+
+#highLowleft {
+  display: none;
+}
+
 /*footer styling*/
 .social-networks {
   text-align: center;
