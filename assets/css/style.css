@@ -51,6 +51,20 @@ nav li {
   text-align: center;
 }
 
+/* deal button*/
+
+.btn1a {
+  font-size: 1.2rem;
+  border-radius: 1px;
+  padding: 9px 10px;
+  color: #555555;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #555555;
+  margin-top: 5px;
+}
+
 /*end of Game home page */
 
 /*footer styling*/
@@ -88,3 +102,12 @@ li {
 }
 
 /* end of footer styling*/
+
+/*Media queries*/
+
+/* ipad tablet width*/
+@media screen and (min-width: 700px) {
+  .home {
+    width: 50%;
+  }
+}
