@@ -16,7 +16,7 @@ p,
 .popuptext,
 .popup,
 nav li,
-span {
+a {
   font-family: "Special Elite", "Courier New", Courier, monospace;
   color: #555555;
 }
@@ -28,8 +28,18 @@ body {
 /* end of common setting to all */
 
 /* nav bar */
-nav li {
+
+.historyHeading {
+  font-size: 2.5rem;
+  display: inline;
+}
+
+.After {
   font-size: 2rem;
+}
+
+nav li {
+  font-size: 1.5rem;
 }
 /* end of nav bar*/
 
@@ -37,7 +47,11 @@ nav li {
 
 p {
   font-size: 1.5rem;
+  padding: 2%;
+  text-align: center;
 }
+
+/*end of Game home page */
 
 /*footer styling*/
 .social-networks {
@@ -53,7 +67,7 @@ li {
   font-size: 2.5rem;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
 
   color: #696666;
   margin-bottom: -0.2rem;
@@ -72,3 +86,5 @@ li {
   font-family: "karla", "sans-serif";
   font-size: 1.5rem;
 }
+
+/* end of footer styling*/
