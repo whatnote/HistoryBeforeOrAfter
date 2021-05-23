@@ -45,7 +45,7 @@ nav li {
 
 /* Game home page */
 
-p {
+.home p {
   font-size: 1.5rem;
   padding: 2%;
   text-align: center;
