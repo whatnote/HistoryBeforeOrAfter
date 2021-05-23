@@ -1,7 +1,26 @@
+var message = document.getElementById('message');
+var count = 0
+var score = 0
+var moves = 10
+
+
+//gameplay
+//start game
+function gameStart() {
+    count = 0
+    score = 0
+    moves = 10
+
+    message.innerHTML = '<h3 class="fadeinout clicktobegin">Click on any card to begin</h3>';
+
+    document.getElementById('start').style.display = 'none';
+    document.getElementById('clearTitle').style.display = 'none';
+
+}
 
 //shuffle
 
-//gameplay
+
 
 //dealing the cards on the left
 
