@@ -19,6 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>History Before or After</title>
   </head>
+
   <body>
     <div class="container-fluid homescreen">
       <nav
@@ -42,6 +43,7 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
               <li
@@ -64,7 +66,8 @@
           </div>
         </div>
       </nav>
-<!-- the how to play will disappear when play starts-->    
+
+      <!-- the how to play will disappear when play starts-->
       <div class="row justify-content-center align-items-center start">
         <div
           class="row justify-content-center align-items-center home"
@@ -86,7 +89,7 @@
           </div>
         </div>
       </div>
-    <!-- the deal button-->    
+      <!-- the deal button-->
       <div class="row justify-content-center align-items-center" id="start">
         <div class="col-m-12 justify-content-center heading">
           <button
@@ -100,84 +103,100 @@
         </div>
       </div>
 
-      
       <div id="clearcards">
         <div class="row justify-content-center align-items-center" id="start1">
-            <div class="col-m-12 justify-content-center">
-                <div id="score"></div>
-            </div>       
+          <div class="col-m-12 justify-content-center">
+            <div id="score"></div>
+          </div>
         </div>
- 
-        <div class="row justify-content-center align-items-center" >    
-   <!-- the first card, with date and event displayed-->           
-            <div class="col-m-5 justify-content-center historycardleft">
-               
-                <div class=" maincontainer justify-content-center" id="highLowleft">
-                    <div class="thecard frontflip">
-                        <div class="thefront "> <h1>History:</h1> <h3>Before or After?</h3></div>
-                            <div class="theback">
-                                <div id="cards">
-                                </div>
-                            </div>
-                    </div>
-                </div>               
-            </div>    
-   <!-- the second card, with highter or lower button-->         
-            <div class="col-m-5 justify-content-center historycardright">
-                <div class="maincontainer justify-content-center" id="highLow"> 
-                    
-                    <div class="thecard frontflip">
-                        <div class="thefront"> <h1>History:</h1> <h3>Before or After?</h3>
-                        </div>
-                            <div class="theback flipback">
-                                <div id="cardright"></div>
-                                    <button id="btnlow" type="button" onclick="hilo('before')" class="btn1">Before</button><br>
-                                    <button id="btnhigh" type="button" onclick="hilo('after')" class="btn1">After</button>  
-                            </div>                     
-                    </div>                  
+
+        <div class="row justify-content-center align-items-center">
+          <!-- the first card, with date and event displayed-->
+          <div class="col-m-5 justify-content-center historycardleft">
+            <div class="maincontainer justify-content-center" id="highLowleft">
+              <div class="thecard frontflip">
+                <div class="thefront">
+                  <h1>History:</h1>
+                  <h3>Before or After?</h3>
                 </div>
+                <div class="theback">
+                  <div id="cards"></div>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
+          <!-- the second card, with highter or lower button-->
+          <div class="col-m-5 justify-content-center historycardright">
+            <div class="maincontainer justify-content-center" id="highLow">
+              <div class="thecard frontflip">
+                <div class="thefront">
+                  <h1>History:</h1>
+                  <h3>Before or After?</h3>
+                </div>
+                <div class="theback flipback">
+                  <div id="cardright"></div>
+                  <button
+                    id="btnlow"
+                    type="button"
+                    onclick="hilo('before')"
+                    class="btn1"
+                  >
+                    Before</button
+                  ><br />
+                  <button
+                    id="btnhigh"
+                    type="button"
+                    onclick="hilo('after')"
+                    class="btn1"
+                  >
+                    After
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+       
 
-    </div>
-    <!-- social meadia footer-->
-    <footer class="fixed-bottom bg-light">
-      <div class="row">
-        <ul class="social-networks col">
-          <li>
-            <a href="https://twitter.com/DanielCulley4" target="_blank"
-              ><i class="fab fa-twitter"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://wa.me/+447940501150" target="_blank"
-              ><i class="fab fa-whatsapp" aria-hidden="true"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/danielculley/
+        <!-- social meadia footer-->
+        <footer class="fixed-bottom bg-light">
+          <div class="row">
+            <ul class="social-networks col">
+              <li>
+                <a href="https://twitter.com/DanielCulley4" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://wa.me/+447940501150" target="_blank"
+                  ><i class="fab fa-whatsapp" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/danielculley/
                     "
-              target="_blank"
-              ><i class="fab fa-instagram" aria-hidden="true"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
+                  target="_blank"
+                  ><i class="fab fa-instagram" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
 
-      <div class="row phonecopyright">
-        <p class="ptext col">
-          copyright
-          <a
-            class="makerlink"
-            href="https://whatnote.github.io/portfolio/"
-            target="_blank"
-            >Daniel Culley</a
-          >
-          2021 all rights reserved
-        </p>
+          <div class="row phonecopyright">
+            <p class="ptext col">
+              copyright
+              <a
+                class="makerlink"
+                href="https://whatnote.github.io/portfolio/"
+                target="_blank"
+                >Daniel Culley</a
+              >
+              2021 all rights reserved
+            </p>
+          </div>
+        </footer>
       </div>
-    </footer>
+    </div>
     <script>
       src =
         "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js";
