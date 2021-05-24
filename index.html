@@ -12,9 +12,8 @@
     />
     <link
       rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>History Before or After</title>
@@ -22,199 +21,95 @@
 
   <body>
     <div class="container-fluid homescreen">
-      <nav
-        class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
-        data-toggle="collapse"
-        data-target=".navbar-collapse.show"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"
-            ><span class="historyHeading">History:</span>
-            <span class="After">Before or After</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
-              <li
-                class="nav-item"
-                data-toggle="collapse"
-                data-target=".navbar-collapse.show"
-              >
-                <a class="nav-link" href="index.html">Game</a>
-              </li>
-              <li
-                class="nav-item"
-                data-toggle="collapse"
-                data-target=".navbar-collapse.show"
-              >
-                <a class="nav-link" href="contactAddcard.html"
-                  >Add Card/Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- the how to play will disappear when play starts-->
       <div class="row justify-content-center align-items-center start">
         <div
-          class="row justify-content-center align-items-center home"
-          id="message"
+          class="col-m-12 justify-content-center heading maintitle"
+          id="clearTitle"
         >
-          <div class="col-m-12 justify-content-center heading startcard">
-            <p>Welcome to History; Before or After!</p>
-            <p>
-              Pitch your knowledge against 10 randomly generated historical
-              events. All you have to do is answer "before" or "after" the
-              preceeding event detailed on the card.
-            </p>
-            <p>
-              Want to know more information about the event, simply click on the
-              more info button there even a link for even more info.
-            </p>
-            <p>Best out of 10!</p>
-            <p>Good Luck!</p>
-          </div>
-        </div>
-      </div>
-      <!-- the deal button-->
-      <div class="row justify-content-center align-items-center" id="start">
-        <div class="col-m-12 justify-content-center heading">
-          <button
-            id="btnstart"
-            type="button"
-            onclick="gameStart()"
-            class="btn1a"
-          >
-            Deal
-          </button>
+          <h1>History:</h1>
+          <h3>Before or After?</h3>
         </div>
       </div>
 
-      <div id="clearcards">
-        <div class="row justify-content-center align-items-center" id="start1">
-          <div class="col-m-12 justify-content-center">
-            <div id="score"></div>
-          </div>
+      <div class="row justify-content-center align-items-center" id="message">
+        <div class="col-m-12 justify-content-center heading startcard">
+          <p>Welcome to History; Before or After!</p>
+          <p>
+            Pitch your knowledge against 10 randomly generated historical
+            events. All you have to do is answer "before" or "after" the
+            preceeding event detailed on the card.
+          </p>
+          <p>
+            Want to know more information about the event, simply click on the
+            more info button there even a link for even more info.
+          </p>
+          <p>Best out of 10!</p>
+          <p>Good Luck!</p>
         </div>
-
-        <div class="row justify-content-center align-items-center">
-          <!-- the first card, with date and event displayed-->
-          <div class="col-m-5 justify-content-center historycardleft">
-            <div class="maincontainer justify-content-center" id="highLowleft">
-              <div class="thecard frontflip">
-                <div class="thefront">
-                  <h1>History:</h1>
-                  <h3>Before or After?</h3>
-                </div>
-                <div class="theback">
-                  <div id="cards"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- the second card, with highter or lower button-->
-          <div class="col-m-5 justify-content-center historycardright">
-            <div class="maincontainer justify-content-center" id="highLow">
-              <div class="thecard frontflip">
-                <div class="thefront">
-                  <h1>History:</h1>
-                  <h3>Before or After?</h3>
-                </div>
-                <div class="theback flipback">
-                  <div id="cardright"></div>
-                  <button
-                    id="btnlow"
-                    type="button"
-                    onclick="hilo('before')"
-                    class="btn1"
-                  >
-                    Before</button
-                  ><br />
-                  <button
-                    id="btnhigh"
-                    type="button"
-                    onclick="hilo('after')"
-                    class="btn1"
-                  >
-                    After
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-       
-
-        <!-- social meadia footer-->
-        <footer class="fixed-bottom bg-light">
-          <div class="row">
-            <ul class="social-networks col">
-              <li>
-                <a href="https://twitter.com/DanielCulley4" target="_blank"
-                  ><i class="fab fa-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://wa.me/+447940501150" target="_blank"
-                  ><i class="fab fa-whatsapp" aria-hidden="true"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/danielculley/
-                    "
-                  target="_blank"
-                  ><i class="fab fa-instagram" aria-hidden="true"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="row phonecopyright">
-            <p class="ptext col">
-              copyright
-              <a
-                class="makerlink"
-                href="https://whatnote.github.io/portfolio/"
-                target="_blank"
-                >Daniel Culley</a
-              >
-              2021 all rights reserved
-            </p>
-          </div>
-        </footer>
       </div>
     </div>
-    <script>
-      src =
-        "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js";
-      integrity =
-        "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q";
-      crossorigin = "anonymous";
-    </script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-    ></script>
+    <div class="row justify-content-center align-items-center" id="start">
+      <div class="col-m-12 justify-content-center heading">
+        <button id="btnstart" type="button" onclick="gameStart()" class="btn1a">
+          Deal
+        </button>
+      </div>
+    </div>
+
+    <div id="clearcards">
+      <div class="row justify-content-center align-items-center" id="start1">
+        <div class="col-m-12 justify-content-center">
+          <div id="score"></div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-m-5 justify-content-center historycardleft">
+          <div class="maincontainer justify-content-center" id="highLowleft">
+            <div class="thecard frontflip">
+              <div class="thefront">
+                <h1>History:</h1>
+                <h3>Before or After?</h3>
+              </div>
+              <div class="theback">
+                <div id="cards"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-m-5 justify-content-center historycardright">
+          <div class="maincontainer justify-content-center" id="highLow">
+            <div class="thecard frontflip">
+              <div class="thefront">
+                <h1>History:</h1>
+                <h3>Before or After?</h3>
+              </div>
+              <div class="theback flipback">
+                <div id="cardright"></div>
+                <button
+                  id="btnlow"
+                  type="button"
+                  onclick="hilo('before')"
+                  class="btn1"
+                >
+                  Before</button
+                ><br />
+                <button
+                  id="btnhigh"
+                  type="button"
+                  onclick="hilo('after')"
+                  class="btn1"
+                >
+                  After
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="scripts/script.js"></script>
   </body>

@@ -6,7 +6,6 @@ var cardOutput = document.getElementById('cards');
 var scoreOutput = document.getElementById('score');
 var cardOutputEvent = document.getElementById('cardright');
 
-//gameplay
 //start game
 function gameStart() {
     count = 0
@@ -28,53 +27,125 @@ function gameStart() {
     cardOutputEvent.innerHTML ="";
     cardOutputEvent.innerHTML +=showCardeventonly();
     document.getElementById('clearcards').style.display ='block';
-}
+    }
+
+
+//beforeAfternon function 
+function hilo(a){
+    var win = false;
+    var oldCard = cards[count].date;
+    count++;
+    cardOutput.innerHTML +=showCard();
+    var newCard = cards[count].date;
+
+    cardOutputEvent.innerHTML +=showCardeventonly();
+    
+    var cardclear=document.getElementById('cardtodeleteleft');
+    cardclear.remove();
+
+    var cardclear=document.getElementById('cardtodeleteright');
+    cardclear.remove();
+        
+    if(a == 'after' && oldCard < newCard){win=true;}
+    else if(a == 'before' && oldCard > newCard){win=true;}
+    if(win){
+        message.innerHTML = '<h3 class="fadeinout youareright ">You are Right!</h3>';
+        score++;
+        moves--;
+        if(moves<1){endPlay(); }           
+        }else {
+            message.innerHTML = '<h3 class="fadeinout youarewrong">You were Wrong!</h3>';
+            moves--;
+            if(moves<1){endPlay();
+            }          
+        }
+        scoreOutput.innerHTML = '<h3>Score: '+score+'</h3>';
+     }
+
+function endPlay(){
+    document.getElementById('clearcards').style.display ='none';
+        message.innerHTML = 
+        '<div class="scorecard"><h3>GAME OVER!</h3><br><h3> Your score was '+score+'</h3><br>' 
+        +'<p>0-3 Maybe play again</p><br>'
+        +'<p>3-7 A Student of History</p><br>'
+        +'<p>7-9 A Doctor of Histroy</p><br>'
+        +'<p>10 A Professor of History!</p><br>'
+        +'<button id="btnstart" type="button" onclick="gameStart()" class="btn1">Play Again?</button></div>'; 
+     }
 
 //shuffle
 function shuffleArray(array){
-  for(var i = array.length -1; i >0; i--){
-      var holder = Math.floor(Math.random() *(i+1));
-      var temp = array[i];
-          array[i]=array[holder];
-          array[holder] = temp;
-      }
-  return array;
-  console.log(array)
+    for(var i = array.length -1; i >0; i--){
+        var holder = Math.floor(Math.random() *(i+1));
+        var temp = array[i];
+            array[i]=array[holder];
+            array[holder] = temp;
+        }
+    return array;
+    console.log(array)
 }
 
-
-
-//dealing the cards on the left
-
-
+//dealing the cards card on the left
 function showCard(){
-  return '<div id="cardtodeleteleft"><img src="assets/css/images/' 
-  +cards[count].image 
-  +'.jpg" class="cardpic"><p>'    
-  +cards[count].event+'<br><br>'
-  +cards[count].date
-  +'</p><div class="popup" onclick="moreInfo()">Click for more Info<span class="popuptext" id="myPopup">'
-  +cards[count].description
-  +'<br><a href="'
-  + cards[count].link
-  +'"target="_blank">Link</a>'
-  +'</span></div>';      
-}
-
-
-//dealing the cards - card on the right
-function showCardeventonly(){
-  return '<div id="cardtodeleteright"><p><img src="assets/css/images/' 
-  + cards[count+1].image 
-  + '.jpg" class="cardpic"><p>'    
-  +cards[count+1].event+'</p>'
+    return '<div id="cardtodeleteleft"><img src="assets/css/images/' 
+    +cards[count].image 
+    +'.jpg" class="cardpic"><p>'    
+    +cards[count].event+'<br><br>'
+    +cards[count].date
+    +'</p><div class="popup" onclick="moreInfo()">Click for more Info<span class="popuptext" id="myPopup">'
+    +cards[count].description
+    +'<br><a href="'
+    + cards[count].link
+    +'"target="_blank">Link</a>'
+    +'</span></div>';      
 }
 
 //popup for card link above.
+function moreInfo() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+//
+
+//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup for the pop up
 
 //dealing the cards - card on the right
+function showCardeventonly(){
+    return '<div id="cardtodeleteright"><p><img src="assets/css/images/' 
+    + cards[count+1].image 
+    + '.jpg" class="cardpic"><p>'    
+    +cards[count+1].event+'</p>'
+}
+
 
 //rotating cards
+$(document).ready(function(){
+  $(".thefront, .flipback").click(function(){
+    $(".thecard").toggleClass("backflip");
+  });
+});
+
+
+//deck of cards
+function Card(date, event, description, link, linkDisplay, image){
+    this.date = date; 
+    this.event = event;
+    this.description = description; 
+    this.link = link;
+    this.linkDisplay = linkDisplay;
+    this.image = image;
+}
+
+//deck of cards
+function Card(date, event, description, link, linkDisplay, image){
+  this.date = date; 
+  this.event = event;
+  this.description = description; 
+  this.link = link;
+  this.linkDisplay = linkDisplay;
+  this.image = image;
+}
 
 //deck of cards
 var cards = [
